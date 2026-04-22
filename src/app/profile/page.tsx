@@ -141,7 +141,7 @@ export default function ProfilePage() {
             
             <ProfileSection title="About Me" icon={Info}>
               <div className="md:col-span-2">
-                 <p className="text-stone-601 text-lg leading-relaxed italic">"{user.aboutMe}"</p>
+                 <p className="text-stone-600 text-lg leading-relaxed italic">"{user.aboutMe}"</p>
               </div>
             </ProfileSection>
 

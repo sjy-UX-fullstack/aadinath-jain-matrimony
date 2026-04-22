@@ -54,7 +54,7 @@ const MOCK_MESSAGES = [
 ];
 
 export default function MessagesPage() {
-  const [activeChat, setActiveChat] = useState(MOCK_CHATS[0]);
+  const [activeChat, setActiveChat] = useState<any>(MOCK_CHATS[0]);
   const [messages, setMessages] = useState(MOCK_MESSAGES);
   const [input, setInput] = useState('');
 
