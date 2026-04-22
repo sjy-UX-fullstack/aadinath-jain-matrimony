@@ -99,6 +99,13 @@ export default function LoginPage() {
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     // Redirect to feed / onboarding
+    setStep('phone'); // Reset for next time if they go back
+    window.location.href = '/feed';
+  };
+
+  const handleDemoLogin = async () => {
+    setLoading(true);
+    await new Promise((r) => setTimeout(r, 800));
     window.location.href = '/feed';
   };
 
@@ -205,6 +212,14 @@ export default function LoginPage() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </>
                   )}
+                </button>
+
+                <button
+                  id="demo-login-btn"
+                  onClick={handleDemoLogin}
+                  className="w-full py-4 rounded-xl font-bold text-sm text-stone-500 hover:text-stone-900 border border-transparent hover:border-stone-100 transition-all font-display"
+                >
+                  Skip for Demo
                 </button>
               </div>
 

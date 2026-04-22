@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck, Users, Star, Sparkles, Heart } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Users, Star, Sparkles, Heart, Quote } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -118,6 +118,96 @@ export default function HomePage() {
         </div>
 
       </section>
+
+      {/* ── Success Stories Section ─────────────────────── */}
+      <section className="relative z-10 py-32 bg-stone-900 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-copper-600/10 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-[30vw] h-[30vw] bg-stone-300/5 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <h2 className="text-copper-400 font-display font-bold text-sm uppercase tracking-[0.3em] mb-4">Union of Souls</h2>
+            <h3 className="text-white text-4xl sm:text-5xl font-display font-semibold tracking-tight">Success Stories</h3>
+            <p className="text-stone-400 mt-6 max-w-xl mx-auto text-lg leading-relaxed italic">
+              "Marriage is not just about two people, it's about two families coming together with shared values."
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                names: 'Samkit & Vidhi', 
+                location: 'Indore', 
+                quote: 'Special thanks to Adinath Vivah for helping us find a partner who shares our community values and lifestyle.', 
+                img: 'https://images.unsplash.com/photo-1543132220-4bf5292c58ee?auto=format&fit=crop&q=80&w=600'
+              },
+              { 
+                names: 'Arihant & Jiya', 
+                location: 'Mumbai', 
+                quote: 'From the first match to our wedding day, the journey was seamless and trusted. Truly a premium experience.', 
+                img: 'https://images.unsplash.com/photo-1550005816-091e19abc4ee?auto=format&fit=crop&q=80&w=600'
+              },
+              { 
+                names: 'Nitin & Preeti', 
+                location: 'Jaipur', 
+                quote: 'We connected through shared gotras and family backgrounds. It felt destined from the very beginning.', 
+                img: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&q=80&w=600'
+              },
+            ].map((story, i) => (
+              <div key={i} className="group relative glass-dark rounded-[2.5rem] overflow-hidden border border-white/5 transition-all hover:border-white/10 hover:shadow-2xl hover:shadow-black/20">
+                <div className="relative h-72">
+                  <Image src={story.img} alt={story.names} fill className="object-cover transition-transform duration-700 group-hover:scale-110 saturate-[0.8] group-hover:saturate-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/10 to-transparent" />
+                </div>
+                <div className="p-8 relative">
+                  <div className="absolute -top-6 right-8 w-12 h-12 bg-copper-500 rounded-2xl flex items-center justify-center shadow-xl rotate-3 group-hover:rotate-6 transition-transform">
+                    <Quote className="w-5 h-5 text-stone-900" fill="currentColor" />
+                  </div>
+                  <h4 className="text-white font-display font-semibold text-xl mb-1">{story.names}</h4>
+                  <p className="text-copper-400 text-xs font-bold uppercase tracking-widest mb-4">{story.location}</p>
+                  <p className="text-stone-400 text-sm leading-relaxed italic line-clamp-3">"{story.quote}"</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-20 text-center">
+            <Link 
+              href="/login" 
+              className="inline-flex items-center gap-2 text-white font-semibold hover:text-copper-300 transition-colors group px-8 py-4 rounded-full border border-white/20 hover:border-copper-500/50"
+            >
+              Start your own story
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Footer ───────────────────────────────────────── */}
+      <footer className="bg-stone-50 border-t border-stone-200 py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="w-12 h-12 rounded-2xl bg-stone-900 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-stone-900/10">
+            <span className="text-copper-400 font-display font-medium text-2xl leading-none">A</span>
+          </div>
+          <p className="text-stone-900 font-display font-bold text-lg tracking-tight mb-2">Adinath Vivah</p>
+          <p className="text-stone-500 text-sm max-w-sm mx-auto mb-8">Premium Jain Matrimony for a lifelong connection built on trust and shared values.</p>
+          <div className="flex justify-center gap-8 text-xs font-bold uppercase tracking-widest text-stone-400">
+            <Link href="/privacy" className="hover:text-stone-900 transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-stone-900 transition-colors">Terms</Link>
+            <Link href="/onboarding" className="hover:text-stone-900 transition-colors">Register</Link>
+            <Link href="/investor" className="hover:text-stone-900 transition-colors">Investors</Link>
+          </div>
+          <div className="mt-12 pt-8 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+             <p className="text-stone-400 text-[10px] uppercase font-bold tracking-widest">© 2026 Adinath Vivah. All rights reserved.</p>
+             <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-copper-500" />
+                <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Community Focused • ID Verified</span>
+             </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
