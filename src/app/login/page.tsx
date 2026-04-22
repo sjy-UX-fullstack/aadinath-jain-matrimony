@@ -115,7 +115,7 @@ export default function LoginPage() {
       {/* ── Left Side Image (Visible on Desktop) ───────────────────── */}
       <div className="hidden lg:block lg:w-1/2 relative h-screen">
         <Image 
-          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200" 
+          src="/images/couple 4.jpg" 
           alt="Happy Couple Login" 
           fill 
           className="object-cover"

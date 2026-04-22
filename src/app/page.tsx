@@ -60,7 +60,7 @@ export default function HomePage() {
             {/* Top Left Image */}
             <div className="absolute top-0 left-0 w-64 h-80 rounded-2xl overflow-hidden shadow-2xl glass transform -rotate-3 hover:translate-y-[-10px] transition-transform duration-500 z-20">
               <Image 
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" 
+                src="/images/couple 1.jpg" 
                 alt="Happy Bride" 
                 fill 
                 className="object-cover"
@@ -74,7 +74,7 @@ export default function HomePage() {
             {/* Bottom Right Image */}
             <div className="absolute bottom-10 right-0 w-72 h-80 rounded-2xl overflow-hidden shadow-2xl glass transform rotate-2 hover:translate-y-[-10px] transition-transform duration-500 z-10">
               <Image 
-                src="https://images.unsplash.com/photo-1543132220-4bf5292c58ee?auto=format&fit=crop&q=80&w=800" 
+                src="/images/couple 2.jpg" 
                 alt="Happy Couple" 
                 fill 
                 className="object-cover"
@@ -141,19 +141,19 @@ export default function HomePage() {
                 names: 'Samkit & Vidhi', 
                 location: 'Indore', 
                 quote: 'Special thanks to Adinath Vivah for helping us find a partner who shares our community values and lifestyle.', 
-                img: 'https://images.unsplash.com/photo-1543132220-4bf5292c58ee?auto=format&fit=crop&q=80&w=600'
+                img: '/images/couple 1.jpg'
               },
               { 
                 names: 'Arihant & Jiya', 
                 location: 'Mumbai', 
                 quote: 'From the first match to our wedding day, the journey was seamless and trusted. Truly a premium experience.', 
-                img: 'https://images.unsplash.com/photo-1550005816-091e19abc4ee?auto=format&fit=crop&q=80&w=600'
+                img: '/images/couple 2.jpg'
               },
               { 
                 names: 'Nitin & Preeti', 
                 location: 'Jaipur', 
                 quote: 'We connected through shared gotras and family backgrounds. It felt destined from the very beginning.', 
-                img: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&q=80&w=600'
+                img: '/images/couple 3.jpg'
               },
             ].map((story, i) => (
               <div key={i} className="group relative glass-dark rounded-[2.5rem] overflow-hidden border border-white/5 transition-all hover:border-white/10 hover:shadow-2xl hover:shadow-black/20">
