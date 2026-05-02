@@ -115,6 +115,63 @@ export default function InvestorPitchDeckPage() {
           </div>
         </div>
       </section>
+      </section>
+
+      {/* ── Slide 4: Go-To-Market & Growth Strategy ───────────────────────── */}
+      <section className="py-24 bg-white border-t border-stone-200/60 relative">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            
+            <div className="order-2 md:order-1 page-enter" style={{ animationDelay: '0.2s' }}>
+               <h2 className="text-sm font-bold text-copper-600 uppercase tracking-widest mb-2">Go-To-Market</h2>
+               <h3 className="text-4xl font-display text-stone-900 mb-6 drop-shadow-sm">The "Exclusive Friction" Strategy.</h3>
+               <div className="glass shadow-xl rounded-3xl p-8 border border-stone-100">
+                 <ul className="space-y-6">
+                   <li className="flex gap-4">
+                     <Users className="w-8 h-8 text-copper-500 flex-shrink-0" />
+                     <div>
+                       <h4 className="font-bold text-stone-900 text-lg">Initial Traction Target</h4>
+                       <p className="text-stone-500 text-sm mt-1">Goal: First 2,000 highly curated app downloads and registrations via App Store & Google Play.</p>
+                     </div>
+                   </li>
+                   <div className="w-full h-px bg-stone-100" />
+                   <li className="flex gap-4">
+                     <ShieldCheck className="w-8 h-8 text-copper-500 flex-shrink-0" />
+                     <div>
+                       <h4 className="font-bold text-stone-900 text-lg">Genuine Friction Point</h4>
+                       <p className="text-stone-500 text-sm mt-1">Implement a strict waitlist or rigorous KYC/reference check during onboarding. This deliberate friction filters out casual users, reinforcing the platform's premium, trustworthy nature.</p>
+                     </div>
+                   </li>
+                   <div className="w-full h-px bg-stone-100" />
+                   <li className="flex gap-4">
+                     <Star className="w-8 h-8 text-copper-500 flex-shrink-0" />
+                     <div>
+                       <h4 className="font-bold text-stone-900 text-lg">Early Adopter Monetization</h4>
+                       <p className="text-stone-500 text-sm mt-1">Targeting 5-20 initial paid registrations to validate the model.</p>
+                       <div className="mt-3 inline-flex flex-col bg-copper-50 border border-copper-200 rounded-xl p-3">
+                         <span className="text-copper-800 font-bold text-sm">Introductory Pricing: ₹3,999</span>
+                         <span className="text-copper-600 text-xs font-semibold mt-1">+ 6 Months Additional Free Subscription</span>
+                       </div>
+                     </div>
+                   </li>
+                 </ul>
+               </div>
+            </div>
+
+            <div className="order-1 md:order-2 page-enter">
+               <div className="relative h-[500px] w-full rounded-3xl overflow-hidden glass-dark border border-stone-200 shadow-2xl flex items-center justify-center bg-stone-900">
+                  <div className="absolute inset-0 bg-gradient-to-br from-copper-500/20 to-transparent" />
+                  <div className="relative z-10 text-center px-8">
+                     <h3 className="text-white font-display text-3xl mb-4">Launch Strategy</h3>
+                     <p className="text-stone-400 text-lg">"Exclusivity breeds desire."</p>
+                     <p className="text-stone-500 text-sm mt-6 max-w-sm mx-auto">By making it slightly difficult to join (friction), we guarantee that every approved member is genuinely looking for marriage within the community.</p>
+                  </div>
+               </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
 
     </div>
   );

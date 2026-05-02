@@ -119,6 +119,53 @@ export default function HomePage() {
 
       </section>
 
+      {/* ── Friction / Problem Statement Section ──────────── */}
+      <section className="relative z-10 py-24 bg-stone-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-stone-500 font-display font-bold text-sm uppercase tracking-[0.3em] mb-4">The Real Struggle</h2>
+            <h3 className="text-stone-900 text-4xl sm:text-5xl font-display font-semibold tracking-tight">
+              Tired of the usual matrimony experience?
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Fake Profiles',
+                desc: 'Endless scrolling through unverified profiles leading to dead ends and wasted time.',
+              },
+              {
+                title: 'No Real Connection',
+                desc: 'Superficial chats with no serious intent or meaningful conversations.',
+              },
+              {
+                title: 'Families Excluded',
+                desc: 'Modern apps forget that marriage is also a union of two families, not just individuals.',
+              },
+              {
+                title: 'Too Many Matches',
+                desc: 'Hundreds of matches but absolutely nothing moving forward to the next step.',
+              },
+            ].map((point, i) => (
+              <div key={i} className="bg-white p-8 rounded-[2rem] border border-stone-200 shadow-sm transition-transform hover:-translate-y-2">
+                <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                  <div className="w-3 h-3 bg-red-400 rounded-full shadow-sm" />
+                </div>
+                <h4 className="text-stone-900 font-display font-semibold text-xl mb-3">{point.title}</h4>
+                <p className="text-stone-500 text-sm leading-relaxed">{point.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center max-w-2xl mx-auto bg-stone-50 border border-stone-200 p-8 rounded-[2rem] shadow-inner">
+            <p className="text-stone-600 text-lg font-medium leading-relaxed">
+              At <span className="text-stone-900 font-bold">Adinath Vivah</span>, we solve this by ensuring <span className="text-copper-600">100% ID verification</span>, focusing on shared Jain community values, and providing features to request <span className="text-copper-600">offline family meetings</span>. No more dead ends.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Success Stories Section ─────────────────────── */}
       <section className="relative z-10 py-32 bg-stone-900 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

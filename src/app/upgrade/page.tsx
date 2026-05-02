@@ -45,7 +45,7 @@ function handleRazorpay() {
   if (typeof window !== 'undefined' && window.Razorpay) {
     const rzp = new window.Razorpay({
       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-      amount: 999900,  // paise
+      amount: 399900,  // paise
       currency: 'INR',
       name: 'Adinath Vivah Premium',
       description: 'Annual Premium Membership',
@@ -108,13 +108,16 @@ export default function UpgradePage() {
                 <p className="text-stone-400 text-sm line-through mb-1 font-medium">₹19,999 / year</p>
                 <div className="flex items-end gap-2 mb-2">
                   <p className="text-6xl font-display font-bold tracking-tighter leading-none">
-                    ₹9,999
+                    ₹3,999
                   </p>
-                  <span className="text-xl text-stone-400 font-medium mb-1">/year</span>
+                  <span className="text-xl text-stone-400 font-medium mb-1">/ 1.5 yrs</span>
                 </div>
-                <p className="text-copper-400 text-sm font-semibold tracking-wide">
-                  Limited time 50% launch offer
-                </p>
+                <div className="text-copper-400 text-sm font-semibold tracking-wide flex flex-col gap-2 mt-2">
+                  <span>Introductory launch offer</span>
+                  <span className="text-white bg-copper-500/20 border border-copper-500/30 inline-flex px-3 py-1 rounded-full text-xs w-fit">
+                    🎉 1 Year Subscription + 6 Months FREE
+                  </span>
+                </div>
               </div>
 
               <button
