@@ -115,7 +115,6 @@ export default function InvestorPitchDeckPage() {
           </div>
         </div>
       </section>
-      </section>
 
       {/* ── Slide 4: Go-To-Market & Growth Strategy ───────────────────────── */}
       <section className="py-24 bg-white border-t border-stone-200/60 relative">
